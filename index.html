@@ -1,75 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jasasree Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purilla Jasasree | AI & Web Developer</title>
+    <meta name="description" content="Portfolio of Purilla Jasasree, a Computer Science Engineering student specializing in Artificial Intelligence and Web Development.">
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="logo">Purilla.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </nav>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Purilla Jasasree</span></h1>
+                <p class="subtitle">AI Enthusiast & Full Stack Developer</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+            <!-- Optional decoration element -->
+            <div class="hero-visual">
+                <div class="blob"></div>
+            </div>
+        </section>
 
-  <!-- Header -->
-  <header>
-    <h1>Purilla Jasasree</h1>
-    <p>BTech Artificial Intelligence Student</p>
-  </header>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>
+                        I am currently pursuing a degree in <strong>Computer Science Engineering</strong> with a specialization in <strong>Artificial Intelligence</strong>. 
+                        I enjoy exploring AI and learning new technologies to build practical solutions.
+                    </p>
+                    <p>
+                        <strong>My Goal:</strong> Use technology to create useful and impactful solutions. I aspire to become a skilled full stack developer and work on innovative AI-driven applications.
+                    </p>
+                    <p>
+                        <strong>Interests:</strong> Artificial Intelligence, Web Development, and building real-world tech solutions.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <h3>My Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a BTech student specializing in Artificial Intelligence.</p>
-  </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-alt">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Face Detection Attendance System</h3>
+                        <p>An AI-based system that automatically marks attendance using advanced face recognition algorithms.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>AI</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>SQL</li>
-    </ul>
-  </section>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A professional, responsive portfolio built to showcase my skills, projects, and goals. Features a modern UI and dark mode.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-subtitle">Have a question or want to work together? Send me a message!</p>
+            
+            <div class="contact-container">
+                <form id="contact-form" action="https://formspree.io/f/xvgzovzz" method="POST">
+                    <!-- Note: Replace the form action URL with your actual Formspree endpoint -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <!-- Hidden input to specify where Formspree should send the mail, even though formspree dashboard sets this -->
+                    <input type="hidden" name="_replyto" value="pjasasree@gmail.com">
+                    <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
 
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x150.png?text=Restaurant+Website" alt="Restaurant Website Screenshot">
-        <h3>Restaurant Website</h3>
-        <p>A simple website created to showcase restaurant menu and services.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x150.png?text=Face+Recognition+System" alt="Face Recognition Attendance Screenshot">
-        <h3>Face Recognition Attendance System</h3>
-        <p>A system that records attendance using face recognition technology.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <p>BTech in Artificial Intelligence – Currently pursuing my degree.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: jasasree@email.com</p>
-  </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
